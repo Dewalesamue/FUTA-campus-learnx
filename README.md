@@ -492,4 +492,4 @@ intelligent, and accessible learning solution that addresses the unique needs of
 
 The platform's robust architecture, intuitive design,
 and AI-powered features position it as a transformative tool for higher education,
-capable of scaling beyond FUTA to serve universities across Nigeria and throughout Africa.
+capable of scaling beyond FUTA to serve universities across Nigeria and throughout Africa. this is the end for now 
