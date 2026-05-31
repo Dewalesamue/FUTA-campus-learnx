@@ -32,7 +32,7 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test file size formatting for various byte values
     - _Requirements: 1.1, 1.2, 1.3_
 
-- [-] 3. Implement PDF Material Service - Core CRUD Operations
+- [x] 3. Implement PDF Material Service - Core CRUD Operations
   - [x] 3.1 Create `src/app/src/services/pdfMaterialService.ts` with PDFMaterialService class
     - Implement `uploadMaterial(file: File, metadata: PDFMaterialMetadata, onProgress: callback, abortSignal?: AbortSignal): Promise<PDFMaterial>` method
     - Use Firebase Storage to upload file to path: `/pdf-materials/{lecturerId}/{materialId}/{fileName}.pdf`
@@ -47,7 +47,7 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Filter materials by status='active' in both methods
     - _Requirements: 2.1, 4.1_
 
-  - [ ] 3.3 Implement material update and delete methods in PDFMaterialService
+  - [x] 3.3 Implement material update and delete methods in PDFMaterialService
     - Implement `updateMaterial(materialId: string, metadata: Partial<PDFMaterialMetadata>): Promise<PDFMaterial>` to update Firestore document
     - Implement `deleteMaterial(materialId: string): Promise<void>` to delete file from Storage and document from Firestore
     - Set material status to 'deleted' instead of hard delete (soft delete pattern)
@@ -63,11 +63,11 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - **Validates: Requirements 4.1**
     - Generate materials and enrollment lists, verify filtering returns only materials for enrolled courses
 
-- [ ] 4. Checkpoint - Ensure core services are working
+- [x] 4. Checkpoint - Ensure core services are working
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Implement download functionality in PDF Material Service
-  - [ ] 5.1 Add download methods to PDFMaterialService
+- [x] 5. Implement download functionality in PDF Material Service
+  - [x] 5.1 Add download methods to PDFMaterialService
     - Implement `downloadMaterial(materialId: string): Promise<string>` to get Firebase Storage download URL
     - Implement `incrementDownloadCount(materialId: string): Promise<void>` to increment downloadCount field in Firestore
     - Ensure download URL preserves original filename
@@ -89,8 +89,8 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test error handling for missing materials
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-- [ ] 6. Implement search, filter, and sort methods in PDF Material Service
-  - [ ] 6.1 Add search and filter methods to PDFMaterialService
+- [x] 6. Implement search, filter, and sort methods in PDF Material Service
+  - [x] 6.1 Add search and filter methods to PDFMaterialService
     - Implement `searchMaterials(materials: PDFMaterial[], searchTerm: string): PDFMaterial[]` to filter by title or description (case-insensitive)
     - Implement `filterByCourse(materials: PDFMaterial[], courseId: string): PDFMaterial[]` to filter by courseId
     - Implement `sortMaterials(materials: PDFMaterial[], sortBy: criteria, order: 'asc'|'desc'): PDFMaterial[]` supporting uploadDate, title, courseName, downloadCount
@@ -118,8 +118,8 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test empty results
     - _Requirements: 7.1-7.6, 9.1-9.7_
 
-- [ ] 7. Implement analytics functionality in PDF Material Service
-  - [ ] 7.1 Add analytics method to PDFMaterialService
+- [x] 7. Implement analytics functionality in PDF Material Service
+  - [x] 7.1 Add analytics method to PDFMaterialService
     - Implement `getLecturerAnalytics(lecturerId: string): Promise<PDFAnalytics>` method
     - Calculate total materials count for lecturer
     - Calculate total downloads across all lecturer's materials
@@ -137,11 +137,11 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test edge cases (no materials, all zero downloads)
     - _Requirements: 12.1, 12.2, 12.3, 12.4, 12.5_
 
-- [ ] 8. Checkpoint - Ensure all service methods are complete
+- [x] 8. Checkpoint - Ensure all service methods are complete
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 9. Implement Access Control Service extensions
-  - [ ] 9.1 Extend existing `src/app/src/services/authService.ts` with PDF access control methods
+- [x] 9. Implement Access Control Service extensions
+  - [x] 9.1 Extend existing `src/app/src/services/authService.ts` with PDF access control methods
     - Implement `canUploadPDF(user: User | null): boolean` to verify user role is 'lecturer'
     - Implement `canDeletePDF(user: User | null, material: PDFMaterial): boolean` to verify user is lecturer AND material owner
     - Implement `canDownloadPDF(user: User | null, material: PDFMaterial): boolean` to verify user is student/lecturer AND (if student) enrolled in course
@@ -180,8 +180,8 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test authorization error messages
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.6_
 
-- [ ] 10. Implement PDF Upload Modal Component
-  - [ ] 10.1 Create `src/app/src/components/PDFUploadModal.tsx` component
+- [x] 10. Implement PDF Upload Modal Component
+  - [x] 10.1 Create `src/app/src/components/PDFUploadModal.tsx` component
     - Use existing dialog component from UI library (shadcn/ui)
     - Add file input with accept="application/pdf" attribute
     - Display file validation errors inline
