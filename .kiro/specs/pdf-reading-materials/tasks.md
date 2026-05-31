@@ -173,7 +173,7 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - **Validates: Requirements 6.6**
     - Generate unauthorized operations, verify all are denied with authorization errors
 
-  - [ ]* 9.7 Write unit tests for access control
+  - [ ] 9.7 Write unit tests for access control
     - Test upload permission for different roles
     - Test delete permission with ownership checks
     - Test download permission with enrollment checks
@@ -211,8 +211,8 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test success and error states
     - _Requirements: 1.1-1.10, 10.1-10.7_
 
-- [ ] 11. Implement PDF Material List Component
-  - [ ] 11.1 Create `src/app/src/components/PDFMaterialList.tsx` component
+- [x] 11. Implement PDF Material List Component
+  - [x] 11.1 Create `src/app/src/components/PDFMaterialList.tsx` component
     - Accept props: materials array, userRole ('student'|'lecturer'), onDownload, onEdit, onDelete callbacks, isLoading
     - Display materials in responsive grid layout (single column on mobile, multi-column on desktop)
     - For each material, show: title, description, course name, upload date (formatted), file size (formatted), download count (lecturer view), lecturer name (student view)
@@ -236,8 +236,8 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test action button visibility based on role
     - _Requirements: 2.1-2.8, 4.1-4.8, 11.1-11.5_
 
-- [ ] 12. Implement PDF Search and Filter Component
-  - [ ] 12.1 Create `src/app/src/components/PDFSearchFilter.tsx` component
+- [x] 12. Implement PDF Search and Filter Component
+  - [x] 12.1 Create `src/app/src/components/PDFSearchFilter.tsx` component
     - Add search input field with placeholder "Search by title or description"
     - Add course filter dropdown with "All Courses" option
     - Call onSearchChange callback when search input changes (debounced)
@@ -254,8 +254,8 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test responsive layout
     - _Requirements: 7.1, 7.2, 7.3, 7.4, 7.5, 7.6_
 
-- [ ] 13. Implement PDF Analytics Component
-  - [ ] 13.1 Create `src/app/src/components/PDFAnalytics.tsx` component
+- [x] 13. Implement PDF Analytics Component
+  - [x] 13.1 Create `src/app/src/components/PDFAnalytics.tsx` component
     - Display analytics in card layout with 4 metrics: total materials, total downloads, most downloaded material, most recent material
     - Format numbers with commas (e.g., "1,234 downloads")
     - Format dates as relative time (e.g., "2 days ago")
@@ -270,7 +270,7 @@ This implementation plan breaks down the PDF reading materials feature into disc
     - Test number and date formatting
     - _Requirements: 12.1, 12.2, 12.3, 12.4, 12.5_
 
-- [ ] 14. Checkpoint - Ensure all components render correctly
+- [x] 14. Checkpoint - Ensure all components render correctly
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 15. Integrate PDF upload functionality into Lecturer Dashboard
