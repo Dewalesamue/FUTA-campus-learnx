@@ -9,6 +9,7 @@ Run `npm i` to install the dependencies.
 
 Run `npm run dev` to start the development server.
 
+This was given to me by my lecturer 
 ## New Features
 
 ### PDF Reading Materials Management
