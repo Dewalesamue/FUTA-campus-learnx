@@ -33,7 +33,9 @@ Target Audience
 Primary Users: FUTA students (undergraduate levels 100-500) and academic staff
 Secondary Users: University administrators and super-administrators
 Potential Expansion: Other Nigerian universities and educational institutions
+
 Core Functionalities
+
 1. Multi-Role User Management System
 The platform implements a sophisticated role-based access control (RBAC) system with four distinct user types:
 
